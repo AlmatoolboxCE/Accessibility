@@ -1,0 +1,1926 @@
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<style>
+  .tableBlue {
+  margin:0px;padding:0px;
+  /*width:100%;*/
+  box-shadow: 10px 10px 5px #888888;
+  border:1px solid #000000;
+
+  -moz-border-radius-bottomleft:0px;
+  -webkit-border-bottom-left-radius:0px;
+  border-bottom-left-radius:0px;
+
+  -moz-border-radius-bottomright:0px;
+  -webkit-border-bottom-right-radius:0px;
+  border-bottom-right-radius:0px;
+
+  -moz-border-radius-topright:0px;
+  -webkit-border-top-right-radius:0px;
+  border-top-right-radius:0px;
+
+  -moz-border-radius-topleft:0px;
+  -webkit-border-top-left-radius:0px;
+  border-top-left-radius:0px;
+  }.tableBlue table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width:100%;
+  /*height:100%;*/
+  margin:0px;padding:0px;
+  }.tableBlue tr:last-child td:last-child {
+  -moz-border-radius-bottomright:0px;
+  -webkit-border-bottom-right-radius:0px;
+  border-bottom-right-radius:0px;
+  }
+  .tableBlue table tr:first-child td:first-child {
+  -moz-border-radius-topleft:0px;
+  -webkit-border-top-left-radius:0px;
+  border-top-left-radius:0px;
+  }
+  .tableBlue table tr:first-child td:last-child {
+  -moz-border-radius-topright:0px;
+  -webkit-border-top-right-radius:0px;
+  border-top-right-radius:0px;
+  }.tableBlue tr:last-child td:first-child{
+  -moz-border-radius-bottomleft:0px;
+  -webkit-border-bottom-left-radius:0px;
+  border-bottom-left-radius:0px;
+  }.tableBlue tr:hover td{
+
+  }
+  .tableBlue tr:nth-child(odd){ background-color:#aad4ff; }
+  .tableBlue tr:nth-child(even)    { background-color:#ffffff; }.tableBlue td{
+  vertical-align:middle;
+
+
+  border:1px solid #000000;
+  border-width:0px 1px 1px 0px;
+  text-align:left;
+  padding:7px;
+  font-size:12px;
+  font-family:Arial;
+  font-weight:normal;
+  color:#000000;
+  }.tableBlue tr:last-child td{
+  border-width:0px 1px 0px 0px;
+  }.tableBlue tr td:last-child{
+  border-width:0px 0px 1px 0px;
+  }.tableBlue tr:last-child td:last-child{
+  border-width:0px 0px 0px 0px;
+  }
+  .tableBlue tr:first-child td{
+  background:-o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
+  background:-moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");	background: -o-linear-gradient(top,#005fbf,003f7f);
+
+  background-color:#005fbf;
+  border:0px solid #000000;
+  text-align:center;
+  border-width:0px 0px 1px 1px;
+  font-size:14px;
+  font-family:Arial;
+  font-weight:bold;
+  color:#ffffff;
+  }
+  .tableBlue tr:first-child:hover td{
+  background:-o-linear-gradient(bottom, #005fbf 5%, #003f7f 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #005fbf), color-stop(1, #003f7f) );
+  background:-moz-linear-gradient( center top, #005fbf 5%, #003f7f 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#005fbf", endColorstr="#003f7f");	background: -o-linear-gradient(top,#005fbf,003f7f);
+
+  background-color:#005fbf;
+  }
+  .tableBlue tr:first-child td:first-child{
+  border-width:0px 0px 1px 0px;
+  }
+  .tableBlue tr:first-child td:last-child{
+  border-width:0px 0px 1px 1px;
+  }
+</style>
+<script type="text/javascript">
+  $(function(){
+  $.each($(".Errors"), function(index, value){
+  $(value).children( ".ErrorsHeader" ).click(function() {
+  $(value).children(".tableErrors" ).slideToggle( "slow" );
+  });
+  });
+
+  $.each($(".Warnings"), function(index, value){
+  $(value).children( ".WarningsHeader" ).click(function() {
+  $(value).children(".tableWarnings" ).slideToggle( "slow" );
+  });
+  });
+
+  $.each($(".siteInfo"), function(index, value){
+  $(value).children( ".Header" ).click(function() {
+  $(value).children(".Data" ).slideToggle( "slow" );
+  });
+  });
+  });
+
+</script>
+<div class="siteInfo">
+  <div class="Header">
+    <h1>
+      TEST PAGE <a href="http://1.2.3.4/esempio">http://1.2.3.4/esempio</a>
+    </h1>
+    <h2>19/03/2014 16:24:33</h2>
+  </div>
+  <div class="Data">
+    <div class="Errors">
+      <div class="ErrorsHeader">
+        8 Errors
+      </div>
+      <div class="tableErrors tableBlue">
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+            <th>Explanation</th>
+          </tr>
+          <tr><td>68</td><td>137</td><td>document type does not allow element "img" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>98</td><td>69</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>99</td><td>102</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>100</td><td>86</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>101</td><td>110</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>172</td><td>61</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>175</td><td>107</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>177</td><td>71</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+
+        </table>
+      </div>
+    </div>
+    <div class="Warnings">
+      <div class="WarningsHeader">
+        0 Warnings
+      </div>
+      <div class="tableWarnings tableBlue">
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+            <th>Explanation</th>
+          </tr>
+          
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="siteInfo">
+  <div class="Header">
+    <h1>
+      TEST PAGE <a href="http://1.2.3.4/esempio">http://1.2.3.4/esempio</a>
+    </h1>
+    <h2>19/03/2014 16:24:36</h2>
+  </div>
+  <div class="Data">
+    <div class="Errors">
+      <div class="ErrorsHeader">
+        11 Errors
+      </div>
+      <div class="tableErrors tableBlue">
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+            <th>Explanation</th>
+          </tr>
+          <tr><td>68</td><td>137</td><td>document type does not allow element "img" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>98</td><td>69</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>99</td><td>102</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>100</td><td>86</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>101</td><td>110</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>172</td><td>61</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>175</td><td>107</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>177</td><td>71</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>203</td><td>44</td><td>an attribute value must be a literal unless it contains only name characters</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=82#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-82">
+    <p>
+      You have used a character that is not considered a "name character" in an
+      attribute value. Which characters are considered "name characters" varies
+      between the different document types, but a good rule of thumb is that
+      unless the value contains <em>only</em> lower or upper case letters in the
+      range a-z you must put quotation marks around the value. In fact, unless
+      you have <em>extreme</em> file size requirements it is a very very good
+      idea to <em>always</em> put quote marks around your attribute values. It
+      is never wrong to do so, and very often it is absolutely necessary.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>203</td><td>44</td><td>character "&" is not allowed in the value of attribute "selected"</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=122#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-122">
+    <p>
+      It is possible that you violated the naming convention for this attribute.
+      For example, <code>id</code> and <code>name</code> attributes must begin with
+      a letter, not a digit.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>203</td><td>44</td><td>value of attribute "selected" cannot be "&quot;selected&quot;"; must be one of "selected"</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=131#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-131">
+    <p>
+      The value of the attribute is defined to be one of a list of possible
+      values but in the document it contained something that is not allowed
+      for that type of attribute. For instance, the &ldquo;<code
+        class="inline">selected</code>&rdquo; attribute must be either
+      minimized as &ldquo;<code class="inline">selected</code>&rdquo;
+      or spelled out in full as &ldquo;<code
+        class="inline">selected="selected"</code>&rdquo;; a value like
+      &ldquo;<code class="inline">selected="true"</code>&rdquo; is not
+      allowed.
+    </p>
+  </div>
+
+                  </td></tr>
+
+        </table>
+      </div>
+    </div>
+    <div class="Warnings">
+      <div class="WarningsHeader">
+        1 Warnings
+      </div>
+      <div class="tableWarnings tableBlue">
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+            <th>Explanation</th>
+          </tr>
+          <tr><td>201</td><td>98</td><td>character "<" is the first character of a delimiter but occurred as data</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=404#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-404">
+    <p>
+      This message may appear in several cases:
+    </p>
+    <ul>
+      <li>You tried to include the "&lt;" character in your page: you should escape it as "&amp;lt;"</li>
+      <li>You used an unescaped ampersand "&amp;": this may be valid in some contexts, 
+      but it is recommended to use "&amp;amp;", which is always safe.</li>
+      <li>Another possibility is that you forgot to close quotes in a previous tag.</li>
+    </ul>
+  </div>
+
+                    </td></tr>
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="siteInfo">
+  <div class="Header">
+    <h1>
+      TEST PAGE <a href="http://1.2.3.4/esempio">http://1.2.3.4/esempio</a>
+    </h1>
+    <h2>19/03/2014 16:24:38</h2>
+  </div>
+  <div class="Data">
+    <div class="Errors">
+      <div class="ErrorsHeader">
+        34 Errors
+      </div>
+      <div class="tableErrors tableBlue">
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+            <th>Explanation</th>
+          </tr>
+          <tr><td>68</td><td>137</td><td>document type does not allow element "img" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>98</td><td>69</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>99</td><td>102</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>100</td><td>86</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>101</td><td>110</td><td>an attribute specification must start with a name or name token</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=105#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-105">
+    <p>
+      An attribute name (and some attribute values) must start with one of
+      a restricted set of characters. This error usually indicates that
+        you have failed to add a closing quotation mark on a previous
+        attribute value (so the attribute value looks like the start of a
+        new attribute) or have used an attribute that is not defined
+        (usually a typo in a common attribute name).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>172</td><td>61</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>175</td><td>107</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>177</td><td>71</td><td>document type does not allow element "span" here</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=64#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-64">
+    <p>
+      The element named above was found in a context where it is not allowed.
+      This could mean that you have incorrectly nested elements -- such as a
+      "style" element in the "body" section instead of inside "head" -- or
+      two elements that overlap (which is not allowed).
+    </p>
+    <p>
+      One common cause for this error is the use of XHTML syntax in HTML
+      documents. Due to HTML's rules of implicitly closed elements, this error
+      can create cascading effects. For instance, using XHTML's "self-closing"
+      tags for "meta" and "link" in the "head" section of a HTML document may
+      cause the parser to infer the end of the "head" section and the
+      beginning of the "body" section (where "link" and "meta" are not
+      allowed; hence the reported error).
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>223</td><td>13</td><td>there is no attribute "name"</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=108#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-108">
+    <p>
+      You have used the attribute named above in your document, but the
+      document type you are using does not support that attribute for this
+      element. This error is often caused by incorrect use of the "Strict"
+      document type with a document that uses frames (e.g. you must use
+      the "Transitional" document type to get the "target" attribute), or
+      by using vendor proprietary extensions such as "marginheight" (this
+      is usually fixed by using CSS to achieve the desired effect instead).
+    </p>
+    <p>
+      This error may also result if the element itself is not supported in
+      the document type you are using, as an undefined element will have no
+      supported attributes; in this case, see the element-undefined error
+      message for further information.
+    </p>
+    <p>
+      How to fix: check the spelling and case of the element and attribute, 
+      (Remember XHTML is all lower-case) and/or 
+      check that they are both allowed in the chosen document type, and/or
+      use CSS instead of this attribute. If you received this error when using the 
+      &lt;embed&gt; element to incorporate flash media in a Web page, see the 
+      <a href="docs/help.html#faq-flash">FAQ item on valid flash</a>.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>86</td><td>general entity "language" not defined and no default entity</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=25#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-25">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>94</td><td>reference to entity "language" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>97</td><td>general entity "pageSize" not defined and no default entity</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=25#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-25">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>105</td><td>reference to entity "pageSize" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>109</td><td>general entity "columnToSort" not defined and no default entity</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=25#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-25">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>121</td><td>reference to entity "columnToSort" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>133</td><td>general entity "direction" not defined and no default entity</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=25#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-25">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>142</td><td>reference to entity "direction" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>145</td><td>general entity "page" not defined and no default entity</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=25#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-25">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>268</td><td>149</td><td>reference to entity "page" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>271</td><td>94</td><td>reference to entity "language" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>271</td><td>105</td><td>reference to entity "pageSize" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>271</td><td>121</td><td>reference to entity "columnToSort" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>271</td><td>142</td><td>reference to entity "direction" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>271</td><td>149</td><td>reference to entity "page" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>515</td><td>94</td><td>reference to entity "language" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>515</td><td>105</td><td>reference to entity "pageSize" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>515</td><td>121</td><td>reference to entity "columnToSort" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>515</td><td>142</td><td>reference to entity "direction" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>515</td><td>149</td><td>reference to entity "page" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>518</td><td>94</td><td>reference to entity "language" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>518</td><td>105</td><td>reference to entity "pageSize" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>518</td><td>121</td><td>reference to entity "columnToSort" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>518</td><td>142</td><td>reference to entity "direction" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+<tr><td>518</td><td>149</td><td>reference to entity "page" for which no system identifier could be generated</td><td>
+                      <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=325#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-325">
+    <p>
+      This is usually a cascading error caused by a an undefined entity
+      reference or use of an unencoded ampersand (&amp;) in an URL or body
+      text. See the previous message for further details.
+    </p>
+  </div>
+
+                  </td></tr>
+
+        </table>
+      </div>
+    </div>
+    <div class="Warnings">
+      <div class="WarningsHeader">
+        25 Warnings
+      </div>
+      <div class="tableWarnings tableBlue">
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+            <th>Explanation</th>
+          </tr>
+          <tr><td>268</td><td>86</td><td>cannot generate system identifier for general entity "language"</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=338#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-338">
+    <p>
+      An entity reference was found in the document, but there is no reference
+      by that name defined. Often this is caused by misspelling the reference
+      name, unencoded ampersands, or by leaving off the trailing semicolon (;).
+      <strong>The most common cause of this error is unencoded ampersands in
+      URLs</strong> as described by the <a
+        href="http://www.htmlhelp.com/">WDG</a> in "<a
+        href="http://www.htmlhelp.com/tools/validator/problems.html#amp">Ampersands
+        in URLs</a>".
+    </p>
+    <p>
+      Entity references start with an ampersand (&amp;) and end with a
+      semicolon (;). If you want to use a literal ampersand in your document
+      you must encode it as "&amp;amp;" (<em>even inside URLs!</em>). Be
+      careful to end entity references with a semicolon or your entity
+      reference may get interpreted in connection with the following text.
+      Also keep in mind that named entity references are case-sensitive;
+      &amp;Aelig; and &amp;aelig; are different characters.
+    </p>
+    <p>
+      If this error appears in some markup generated by PHP's session handling
+      code, <a href="http://www.w3.org/QA/2005/04/php-session" 
+      title="Ampersands, PHP Sessions and Valid HTML">this article</a> has 
+      explanations and solutions to your problem.
+    </p>
+    <p>
+      Note that in most documents, errors related to entity references will
+      trigger up to 5 separate messages from the Validator. Usually these
+      will all disappear when the original problem is fixed.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>94</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>97</td><td>cannot generate system identifier for general entity "pageSize"</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=338#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-338">
+    <p>
+      An entity reference was found in the document, but there is no reference
+      by that name defined. Often this is caused by misspelling the reference
+      name, unencoded ampersands, or by leaving off the trailing semicolon (;).
+      <strong>The most common cause of this error is unencoded ampersands in
+      URLs</strong> as described by the <a
+        href="http://www.htmlhelp.com/">WDG</a> in "<a
+        href="http://www.htmlhelp.com/tools/validator/problems.html#amp">Ampersands
+        in URLs</a>".
+    </p>
+    <p>
+      Entity references start with an ampersand (&amp;) and end with a
+      semicolon (;). If you want to use a literal ampersand in your document
+      you must encode it as "&amp;amp;" (<em>even inside URLs!</em>). Be
+      careful to end entity references with a semicolon or your entity
+      reference may get interpreted in connection with the following text.
+      Also keep in mind that named entity references are case-sensitive;
+      &amp;Aelig; and &amp;aelig; are different characters.
+    </p>
+    <p>
+      If this error appears in some markup generated by PHP's session handling
+      code, <a href="http://www.w3.org/QA/2005/04/php-session" 
+      title="Ampersands, PHP Sessions and Valid HTML">this article</a> has 
+      explanations and solutions to your problem.
+    </p>
+    <p>
+      Note that in most documents, errors related to entity references will
+      trigger up to 5 separate messages from the Validator. Usually these
+      will all disappear when the original problem is fixed.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>105</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>109</td><td>cannot generate system identifier for general entity "columnToSort"</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=338#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-338">
+    <p>
+      An entity reference was found in the document, but there is no reference
+      by that name defined. Often this is caused by misspelling the reference
+      name, unencoded ampersands, or by leaving off the trailing semicolon (;).
+      <strong>The most common cause of this error is unencoded ampersands in
+      URLs</strong> as described by the <a
+        href="http://www.htmlhelp.com/">WDG</a> in "<a
+        href="http://www.htmlhelp.com/tools/validator/problems.html#amp">Ampersands
+        in URLs</a>".
+    </p>
+    <p>
+      Entity references start with an ampersand (&amp;) and end with a
+      semicolon (;). If you want to use a literal ampersand in your document
+      you must encode it as "&amp;amp;" (<em>even inside URLs!</em>). Be
+      careful to end entity references with a semicolon or your entity
+      reference may get interpreted in connection with the following text.
+      Also keep in mind that named entity references are case-sensitive;
+      &amp;Aelig; and &amp;aelig; are different characters.
+    </p>
+    <p>
+      If this error appears in some markup generated by PHP's session handling
+      code, <a href="http://www.w3.org/QA/2005/04/php-session" 
+      title="Ampersands, PHP Sessions and Valid HTML">this article</a> has 
+      explanations and solutions to your problem.
+    </p>
+    <p>
+      Note that in most documents, errors related to entity references will
+      trigger up to 5 separate messages from the Validator. Usually these
+      will all disappear when the original problem is fixed.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>121</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>133</td><td>cannot generate system identifier for general entity "direction"</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=338#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-338">
+    <p>
+      An entity reference was found in the document, but there is no reference
+      by that name defined. Often this is caused by misspelling the reference
+      name, unencoded ampersands, or by leaving off the trailing semicolon (;).
+      <strong>The most common cause of this error is unencoded ampersands in
+      URLs</strong> as described by the <a
+        href="http://www.htmlhelp.com/">WDG</a> in "<a
+        href="http://www.htmlhelp.com/tools/validator/problems.html#amp">Ampersands
+        in URLs</a>".
+    </p>
+    <p>
+      Entity references start with an ampersand (&amp;) and end with a
+      semicolon (;). If you want to use a literal ampersand in your document
+      you must encode it as "&amp;amp;" (<em>even inside URLs!</em>). Be
+      careful to end entity references with a semicolon or your entity
+      reference may get interpreted in connection with the following text.
+      Also keep in mind that named entity references are case-sensitive;
+      &amp;Aelig; and &amp;aelig; are different characters.
+    </p>
+    <p>
+      If this error appears in some markup generated by PHP's session handling
+      code, <a href="http://www.w3.org/QA/2005/04/php-session" 
+      title="Ampersands, PHP Sessions and Valid HTML">this article</a> has 
+      explanations and solutions to your problem.
+    </p>
+    <p>
+      Note that in most documents, errors related to entity references will
+      trigger up to 5 separate messages from the Validator. Usually these
+      will all disappear when the original problem is fixed.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>142</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>145</td><td>cannot generate system identifier for general entity "page"</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=338#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-338">
+    <p>
+      An entity reference was found in the document, but there is no reference
+      by that name defined. Often this is caused by misspelling the reference
+      name, unencoded ampersands, or by leaving off the trailing semicolon (;).
+      <strong>The most common cause of this error is unencoded ampersands in
+      URLs</strong> as described by the <a
+        href="http://www.htmlhelp.com/">WDG</a> in "<a
+        href="http://www.htmlhelp.com/tools/validator/problems.html#amp">Ampersands
+        in URLs</a>".
+    </p>
+    <p>
+      Entity references start with an ampersand (&amp;) and end with a
+      semicolon (;). If you want to use a literal ampersand in your document
+      you must encode it as "&amp;amp;" (<em>even inside URLs!</em>). Be
+      careful to end entity references with a semicolon or your entity
+      reference may get interpreted in connection with the following text.
+      Also keep in mind that named entity references are case-sensitive;
+      &amp;Aelig; and &amp;aelig; are different characters.
+    </p>
+    <p>
+      If this error appears in some markup generated by PHP's session handling
+      code, <a href="http://www.w3.org/QA/2005/04/php-session" 
+      title="Ampersands, PHP Sessions and Valid HTML">this article</a> has 
+      explanations and solutions to your problem.
+    </p>
+    <p>
+      Note that in most documents, errors related to entity references will
+      trigger up to 5 separate messages from the Validator. Usually these
+      will all disappear when the original problem is fixed.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>268</td><td>149</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>271</td><td>94</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>271</td><td>105</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>271</td><td>121</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>271</td><td>142</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>271</td><td>149</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>515</td><td>94</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>515</td><td>105</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>515</td><td>121</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>515</td><td>142</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>515</td><td>149</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>518</td><td>94</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>518</td><td>105</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>518</td><td>121</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>518</td><td>142</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+<tr><td>518</td><td>149</td><td>reference not terminated by REFC delimiter</td><td>
+                        <p class="helpwanted">
+      <a
+        href="feedback.html?uri=;errmsg_id=394#errormsg"
+	title="Suggest improvements on this error message through our feedback channels" 
+      >&#x2709;</a>
+    </p>
+
+    <div class="ve mid-394">
+    <p>
+      If you meant to include an entity that starts with "&amp;", then you should 
+      terminate it with ";".  Another reason for this error message is that 
+      you inadvertently created an entity by failing to escape an "&amp;" 
+      character just before this text.
+    </p>
+  </div>
+
+                    </td></tr>
+
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

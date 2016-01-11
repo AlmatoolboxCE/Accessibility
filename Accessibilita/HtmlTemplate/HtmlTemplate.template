@@ -1,0 +1,43 @@
+<div class="siteInfo">
+  <div class="Header">
+    <h1>
+      TEST PAGE <a href="@URL@">@URL@</a>
+    </h1>
+    <h2>@DATE@</h2>
+  </div>
+  <div class="Data">
+    <div class="Errors">
+      <div class="ErrorsHeader">
+        @ERRORCOUNT@ Errors
+      </div>
+      <div class="tableErrors tableBlue">
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+            <th>Explanation</th>
+          </tr>
+          @FORERROR@
+        </table>
+      </div>
+    </div>
+    <div class="Warnings">
+      <div class="WarningsHeader">
+        @WARNINGCOUNT@ Warnings
+      </div>
+      <div class="tableWarnings tableBlue">
+        <table>
+          <tr>
+            <th>Line</th>
+            <th>Column</th>
+            <th>Message</th>
+            <th>Explanation</th>
+          </tr>
+          @FORWARNING@
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
